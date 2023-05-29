@@ -12,29 +12,32 @@ body {
 
 .main-container {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
-  align-content: center;
-  margin: 0 ;
-  padding: 0px;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  margin: 5px;
 }
-/* 
-.calendar {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  margin: 0 ;
-  padding: 0px;
-} */
+
+img {
+  width: 80%;
+  height: 80%;
+}
 
 .inner-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 15px;
+  padding: 20px;
+}
+
+.description {
+  flex: 1;
 }
 
 h1, h2, h3 {
@@ -66,3 +69,112 @@ a:hover {
 .button:hover {
   background-color: #0072c6;
 } */
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+  .main-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    padding: 20px;
+  }
+  .inner-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+    padding: 20px;
+  }
+  .description {
+    display: flex;
+    flex: 1;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .body {
+    overflow: hidden;
+  }
+  .main-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+  }
+    .inner-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+    }
+    .description {
+      display: flex;
+      flex: 1;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .body {
+    overflow: hidden;
+    text-align: center;
+    
+  }
+
+  .main-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+  }
+    .inner-container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      padding: 15px;
+    }
+    .description {
+      display: flex;
+      flex: 1;
+    }
+}
+
+@media all and (max-width: 480px) {
+  .body {
+    overflow: hidden;
+  }
+
+  .main-container {
+    overflow: hidden;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 15px;
+  }
+  .inner-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 10px;
+  }
+  .description {
+    display: flex;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+  }
+}
