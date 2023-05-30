@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-// import REACT_APP_API_KEY from '';
+
 
 const APODComponent = () => {
   const [apodData, setApodData] = useState(null);
@@ -54,7 +54,7 @@ const APODComponent = () => {
 export default APODComponent;
 
 /**
-* ! The toISOString() method returns a string in simplified extended ISO format (ISO 8601), 
+* ! Use this method to remove the unwanted styling from the calendar. The toISOString() method returns a string in simplified extended ISO format (ISO 8601), 
 * ! which is always 24 or 27 characters long (YYYY-MM-DDTHH:mm:ss.sssZ or ±YYYYYY-MM-DDTHH:mm:ss.sssZ, respectively). 
 * ! The timezone is always zero UTC offset, as denoted by the suffix Z.
 */
