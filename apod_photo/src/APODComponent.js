@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+// import REACT_APP_API_KEY from '';
 
 const APODComponent = () => {
   const [apodData, setApodData] = useState(null);
@@ -8,7 +9,7 @@ const APODComponent = () => {
 
   useEffect(() => {
     const fetchAPOD = async () => {
-      const apiKey = 'DEMO_KEY';
+      const apiKey = "wD4gIhxi4LAjVfoN7bECL01qKpcGXre9wRXwuL48";
       const formattedDate = selectedDate.toISOString().split('T')[0];
       const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&date=${formattedDate}`;
 
